@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "stringify json by schema",
   "main": "lib/sjs.js",
-  "module": "lib/sjs.esm.js",
+  "module": "lib/sjs.esm.mjs",
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.13.10",
