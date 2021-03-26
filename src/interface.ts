@@ -2,11 +2,12 @@ interface _ISchema {
     [key: string]: SchemaAttr | _ISchema
 }
 
+type SchemaAttrType = 'string' | 'number' | 'object' | 'array' | 'null' | 'bool'
 type ISchema = _ISchema | SchemaAttr[]
 
 class SchemaAttr {
     __isSls: boolean
-    constructor(public type: string, public serializer ?: Array<SchemaAttr> | ISchema) {
+    constructor(public type: SchemaAttrType, public serializer ?: Array<SchemaAttr> | ISchema) {
         this.__isSls = true
     }
 }
@@ -43,6 +44,7 @@ export {
     IChunk,
     IQueue,
     GetVal,
-    ClearChunkRedundantChar
+    ClearChunkRedundantChar,
+    SchemaAttrType
 }
 

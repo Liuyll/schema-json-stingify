@@ -1,4 +1,4 @@
-import { IChunk, IQueue, ISchema, isSchemaAttr, SchemaAttr } from './interface'
+import { IChunk, IQueue, ISchema, isSchemaAttr, SchemaAttr, SchemaAttrType } from './interface'
 
 const generateQueueAndChunks = (schema: ISchema, isArray ?: boolean): [Array<IQueue>, Array<IChunk>] => {
     const pathQueue:Array<IQueue> = []
@@ -149,7 +149,7 @@ function makeSavePathReplacer(pathQueue: Array<IQueue>, chunks: Array<IChunk>, a
 
 const isNestType = (schema: SchemaAttr) => schema.type === 'object' || schema.type === 'array'
 
-const attr = (type: string, serializer ?: Array<SchemaAttr> | ISchema) => {
+const attr = (type: SchemaAttrType, serializer ?: Array<SchemaAttr> | ISchema) => {
     return new SchemaAttr(type, serializer)
 }
 export {
