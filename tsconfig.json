@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "lib": ["es2017","es6","dom"],
+        "experimentalDecorators": true,
+        "target": "ES6",
+        "jsx":"react",
+        "allowSyntheticDefaultImports": true,
+        "outDir": "./lib",
+        "types": ["mocha", "node"]
+    },    
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules"
+    ],
+    
+}
